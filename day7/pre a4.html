@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Flex Grow</title>
+    <style>.flex-box {
+        display: flex;
+        border: 1px dashed red;
+        margin: 10px;
+      }
+      
+      .flex-box div {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+      
+      #box2 div{
+        flex-grow: 1;
+      }
+      
+      #box1 div:nth-of-type(2) {
+        flex-grow: 1;
+      }
+      
+      #box2 div:nth-of-type(2) {
+        flex-grow: 3;
+      }
+      
+      
+      #box3 div {
+      /*   flex-grow: 1; */
+      }
+      
+      #box3 div:nth-of-type(2n) {
+      /*   flex-grow: 2; */
+      }</style>
+  </head>
+  <body>
+    <div class="flex-box" id="box1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <div class="flex-box" id="box2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <div class="flex-box" id="box3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>

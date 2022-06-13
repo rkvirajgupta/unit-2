@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Child Combinator</title>
+    <style>
+        div > p {
+  border:1px solid red;
+}
+
+.class1 > ul {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#id2 > p {
+  font-size: 30px;
+}
+    </style>
+  </head>
+  <body>
+    <div id="id1">
+      ID1 Start
+      <div id="id2">
+      -- ID2 Start
+        <div id="id3">
+          ---- ID3 Start
+          <p id="id4">
+            ------ ID4 Start
+          </p>
+        </div>
+        <div id="id5" class="class1">
+          ---- ID5 Start  
+          <ul><li>1</li><li>2</li></ul>
+          <div>
+            <ul><li>3</li><li>4</li></ul>
+          </div>
+          <ul><li>5</li><li>6</li></ul>
+        </div>
+        <ul><li>7</li><li>8</li></ul>
+      </div>
+      <div id="id6">
+        -- ID6 Start
+      </div>  
+    </div>
+    <p id="id9">
+      ID9 Start
+    </p>
+  </body>
+</html>

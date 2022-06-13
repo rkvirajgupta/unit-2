@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Checkout page
+    </title>
+</head>
+<body>
+    
+    <h1>Check out page</h1>
+    <input id="text" type="text" placeholder="enter name">
+    <input id="text" type="number" placeholder="enter card num">
+    <input id="text" type="number" placeholder="enter cvv">
+    <input id="text" type="date" placeholder="enter expiry date">
+    <button id="pay">pay</button>
+    <h2></h2>
+</body>
+</html>
+<script>
+
+document.querySelector("#pay").addEventListener("click",function(){
+       pay();
+
+
+    });
+
+    function pay(){
+    if(document.querySelector("#text").value=="")
+    {
+        document.querySelector("h2").textContent="enter valid details";
+
+    }
+    else{
+        alert("thankyou for purchasing");
+       window.location.href="success.html";
+
+}
+}
+
+</script>

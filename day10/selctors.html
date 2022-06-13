@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="h1()">Change H1</button>
+        <button onclick="h3()">Change H3</button>
+        <button onclick="h5()">Change H5</button>
+        <button onclick="green()">Change Green</button>
+        <button onclick="red()">Change Red</button>
+        <button onclick="blue()">Change Blue</button>
+       
+    </body>
+</html>
+<script>
+    function h1(){
+        var firstDiv = document.querySelector('h1');
+  firstDiv.style.backgroundColor = 'red';
+    }
+    function h3(){
+        var thirdDiv = document.querySelectorAll('h3')[0];
+  thirdDiv.style.backgroundColor = 'green';
+  var thirdDiv = document.querySelectorAll('h3')[1];
+  thirdDiv.style.backgroundColor = 'green';
+    }
+    function h5(){
+        var thirdDiv = document.querySelectorAll('h5')[0];
+  thirdDiv.style.backgroundColor = 'blue';
+  var thirdDiv = document.querySelectorAll('h5')[1];
+  thirdDiv.style.backgroundColor = 'blue';
+  var thirdDiv = document.querySelectorAll('h5')[2];
+  thirdDiv.style.backgroundColor = 'blue';
+    }
+
+    function green(){
+        var thirdDiv = document.querySelectorAll('div')[0];
+  thirdDiv.style.backgroundColor = 'green';
+  var thirdDiv = document.querySelectorAll('p')[0];
+  thirdDiv.style.backgroundColor = 'green';
+
+    }
+
+
+    function red(){
+        var thirdDiv = document.querySelectorAll('div')[1];
+  thirdDiv.style.backgroundColor = 'red';
+  var thirdDiv = document.querySelectorAll('p')[1];
+  thirdDiv.style.backgroundColor = 'red';
+
+    }
+
+
+    function blue(){
+        var thirdDiv = document.querySelectorAll('div')[2];
+  thirdDiv.style.backgroundColor = 'blue';
+  var thirdDiv = document.querySelectorAll('p')[2];
+  thirdDiv.style.backgroundColor = 'blue';
+
+    }
+</script>

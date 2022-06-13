@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="inputTag" type="text" placeholder="enter input" value=""/>
+<select id="selectTag">
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+</select>
+
+  <button onclick="getValue()">Get Value</button>
+  <h1 id="h1Tag"></h1>
+  <h2 id="h2Tag"></h2>
+</body>
+</html>
+<script>
+  function getValue(){
+    var res=document.getElementById("inputTag").value;
+    var out=document.getElementById("selectTag").value;
+    alert(res);
+    // alert(res,out);
+    //alert responce on one command not on two see above
+    console.log(res,out);
+    document.getElementById("h1Tag").textContent=res;
+    document.getElementById("h2Tag").textContent=out;
+  }
+</script>

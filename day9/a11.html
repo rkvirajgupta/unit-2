@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="new">I am P tag</p>
+    <h1 class="new">I am new tag</h1>
+    <div id="container">I am div</div>
+    <p class="pTag">I am p</p>
+</body>
+</html>
+<script>
+    // console.log(document.getElementsByClassName("new"));
+    // console.log(document.getElementsByClassName("pTag"));
+     console.log(document.getElementsByClassName("new")[0]);
+      console.log(document.getElementsByClassName("new")[1]);
+    //   getElementsByClassName will return arr of elements
+    console.log(document.getElementsByTagName("div"));
+    console.log(document.getElementsByTagName("h1"));
+//tag name is also returning array since it will have multiple items
+console.log(document.getElementsByTagName("p"));
+
+console.log(document.getElementsByTagName("p")[0]);
+
+
+
+
+</script>

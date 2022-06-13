@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.class1{
+  font-size:30px
+}
+
+.class2{
+  color:blue
+}
+
+.class3{
+  background:red
+}
+    </style>
+</head>
+<body>
+    <div id="div" class="class1 class2">
+        DIV
+    </div>
+    
+    <button onclick="addClass()">Add Class</button>
+</body>
+</html>
+<script>
+
+function addClass(){
+  var div = document.getElementById('div')
+  var cname = div.getAttribute('class')
+  console.log(cname)
+  cname += ' class3'
+  console.log(cname)
+  div.setAttribute('class',cname)
+}
+
+</script>

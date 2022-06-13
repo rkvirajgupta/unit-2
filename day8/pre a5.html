@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Specificity</title>
+    <style>
+        #id1 + div {
+  /* Score - 101 */
+  color: blue;
+}
+
+#id2 {
+  /* Score - 100 */
+  color: red;
+}
+
+#id3 a {
+  /* Score - 101 */
+  color: red;
+}
+
+.class1 a {
+  /* Score - 011 */
+  color: green;
+}
+    </style>
+  </head>
+  <body>
+    <div id="id1">First Div</div>
+    <div id="id2">Second Div</div>
+    <div id="id3" class="class1">
+      <a href="www.masaischool.com">MASAI</a>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>Specificity Oder</title>
+    <style>
+
+div {
+  min-height: 20px;
+  margin: 10px;
+}
+
+#id1 > div {
+  /* Score - 101 */
+  border: 2px solid red;
+}
+#id1 div {
+  /* Score - 101 */
+  border: 2px solid black;
+}
+
+#id5 div {
+  /* Score - 101 */
+  border: 2px solid black;
+}
+#id5 > div {
+  /* Score - 101 */
+  border: 2px solid red;
+}
+    </style>
+  </head>
+  <body>
+    <div id="id1">
+      <div id="id2">
+        <div id="id3">
+          <div id="id4">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="id5">
+      <div id="id6">
+        <div id="id7">
+          <div id="id8">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

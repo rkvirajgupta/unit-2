@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Grid</title>
+    <style>#cont {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 50px 50px 50px 50px 50px 50px;
+        background: black;
+        padding: 20px;
+      }
+      
+      #cont div {
+        background: yellow;
+        font-size: 30px;
+        text-align: center;
+      }
+      
+      #item2 {
+        grid-area: 1 / 1 / span 1 / span 2;
+      }
+      
+      #item4 {
+        grid-area: 2 / 1 / 4 / span 4;
+      }
+      
+      #item5 {
+      /*   grid-area: 3 / 2 / 5 / 4; */
+        background: red !important;
+        grid-row-start: 3;
+        grid-column-start: 2;
+        grid-row-end: 5;
+        grid-column-end: 4;
+      }</style>
+  </head>
+  <body>
+    <div id="cont">
+      <div id="item1">1</div>
+      <div id="item2">2</div>
+      <div id="item3">3</div>
+      <div id="item4">4</div>
+      <div id="item5">5</div>
+      <div id="item6">6</div>
+      <div id="item7">7</div>
+      <div id="item8">8</div>
+      <div id="item9">9</div>
+      <div id="item10">10</div>
+      <div id="item11">11</div>
+      <div id="item12">12</div>
+      <div id="item13">13</div>
+      <div id="item14">14</div>
+      <div id="item15">15</div>
+      <div id="item16">16</div>
+    </div>
+  </body>
+</html>

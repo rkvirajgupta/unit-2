@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form>input{
+            margin-bottom: 10px;
+            margin-top:10px;
+        }
+        table,td,th{
+            border:1px solid #ddd;
+        }
+        
+            
+        
+    </style>
+</head>
+<body>
+    <select id="filter" onchange="filterCat()">
+        <option value="">Filter By Category</option>
+        <option value="ref">refund</option>
+        <option value="item_miss">item missing</option>
+        <option value="ord">order status</option>
+        <option value="delv">delivery</option>
+        <option value="feed">feedback</option>
+    </select>
+
+    <select id="sortPrice" onchange="sortPrice()">
+        <option value="">Sort By ticket Number</option>
+        <option value="high">high to low</option>
+        <option value="low">low to high</option>
+        
+    </select>
+    <div id="container">
+        <div>
+            <form>
+                <select id ="a">
+                    <option value="">Select Category</option>
+                    <option value="ref">refund</option>
+                    <option value="item_miss">item missing</option>
+                    <option value="ord">order status</option>
+                    <option value="delv">delivery</option>
+                    <option value="feed">feedback</option>
+                </select>
+               <br>
+               <textarea placeholder="enter details" name="" id="b" cols="30" rows="10"></textarea>
+               <br>
+               <input type="date" id="c" placeholder="enter stamp date" >
+               <br>
+               <input type="number" id="d" placeholder="enter Ticket Number">
+            <br>
+            <input type="submit" value="submit">
+            </form>
+        </div>
+        <div id="display">
+            <table>
+                <thead>
+                    <tr><th>Category</th>
+                        <th>ticket details</th>
+                        <th>stamp date</th>
+                        <th>ticket number</th>
+                       
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+   
+    document.querySelector("form").addEventListener("submit",karlosubmit)
+    var arr=JSON.parse(localStorage.getItem("karlo"))||[];
+    table(arr);
+    function karlosubmit(event){
+event.preventDefault();
+        var aa=document.querySelector("#a").value;
+        var bb=document.querySelector("#b").value;
+        var cc=document.querySelector("#c").value;
+        var dd=document.querySelector("#d").value;
+        console.log(aa,bb,cc,dd);
+        
+var obj={
+    aaa:aa,
+    bbb:bb,
+    ccc:cc,
+    ddd:dd,
+    
+};
+arr.push(obj);
+localStorage.setItem("karlo",JSON.stringify(arr));
+table(arr);
+
+}
+    
+function table(arr){
+    document.querySelector("tbody").textContent="";
+        arr.map(function(elem,index){
+            
+       
+            var tr=document.createElement("tr");
+            var td1=document.createElement("td");
+            td1.textContent=elem.aaa;
+            var td2=document.createElement("td");
+            td2.textContent=elem.bbb;
+            var td3=document.createElement("td");
+            td3.textContent=elem.ccc;
+            var td4=document.createElement("td");
+            td4.textContent=elem.ddd;
+           
+            tr.append(td1,td2,td3,td4);
+            document.querySelector("tbody").append(tr);
+        });
+    }
+
+    function sortPrice(){
+        var z=document.querySelector("#sortPrice").value;
+        if(z=="low"){
+            arr.sort(function(a,b){
+                return a.price - b.price;
+            });
+        }
+        if(z=="high"){
+            arr.sort(function( a,b){
+                return b.price - a.price;
+            });
+        }
+        table(arr);
+    }
+    function filterCat(){
+        var z=document.querySelector("#filter").value;
+        var filterdlist=arr.filter(function(elem){
+            return elem.cat==z;
+        });
+        table(filterdlist);
+    }
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+  
+
+var arr =["html","css","js","react"];
+localStorage.setItem("web",arr);
+var x=localStorage.getItem("web");
+console.log(x);
+console.log( typeof x);
+//you can not perform operation on it because it is string so 
+//you need to make it in form of json
+var obj={name:"ritik",place:"syx"};
+localStorage.setItem("web1",obj);
+var x=localStorage.getItem("web1");
+console.log(x);
+console.log( typeof x);
+//we need to change arr and obj first in string than in localStorage
+
+//use json 
+
+
+</script>

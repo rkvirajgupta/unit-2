@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         button {
+             color:white;
+             border:0px;
+             padding: 10px 20px;
+             margin:20px;
+
+         }
+         #container{
+             display:flex;
+         }
+         #container>div {
+             margin:20px;
+             padding: 10px 20px;
+
+         }
+     </style>
+ </head>
+ <body>
+     <div id="container"></div>
+     
+ </body>
+ </html>
+ <script>
+     var buttonObj=[
+         {
+             name:"Primary",
+             bgColor:"blue",
+         },
+         {
+             name:"Secondary",
+             bgColor:"grey",
+
+         },
+         {
+             name:"Success",
+             bgColor:"green",
+         },
+      ]
+      buttonObj.map(function (elem){
+
+        //   console.log(elem);
+        var button=document.createElement("button");
+        // var button=document.createElement("div");
+
+        button.textContent=elem.name;
+        button.style.backgroundColor=elem.bgColor;
+        button.style.margin="10px";
+
+        document.querySelector("body").append(button);
+        // document.querySelector("#container").append(button);
+
+
+      });
+
+
+//       var button1=document.createElement("button");
+//       button1.textContent="Primary";
+//       button1.style.backgroundColor="blue";
+
+//       var button2=document.createElement("button");
+//       button2.textContent="Secondary";
+//       button2.style.backgroundColor="grey";
+
+//       var button3=document.createElement("button");
+//       button3.textContent="Sucess";
+//       button3.style.backgroundColor="green";
+// document.querySelector("body").append(button1,button2,button3);
+
+
+    //  var button1= document.createElement("button");
+    //  button1.textContent="Primary";
+    //  button1.style.backgroundColor="blue";
+    //  button1.style.color="white";
+    //  button1.style.border="0px";
+    //  button1.style.padding="20px";
+    //  document.querySelector("body").append(button1);
+ </script>

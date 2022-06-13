@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #park{
+            font-weight: bolder;
+            font-size: large;
+            margin-left:25px;
+        }
+        #ark{
+            color:grey;
+            text-decoration: line-through;
+            margin-right:50px;
+        }
+        #big {
+            width:80%;
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+           grid-gap:15px;
+           margin:auto;
+        }
+        #big>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        h5,p{
+            
+            margin:0px;
+            width:100%;
+        }
+        h5{
+            color:grey;
+            margin-bottom: 20px;
+            margin-left:25px;
+
+        }
+        #ava {
+            width:100%;
+            border-radius: 3px;
+            }
+           #boxer{
+               display:flex;
+           }
+    </style>
+</head>
+<body>
+    <div id="big"></div>
+    
+</body>
+</html>
+<script>
+     var data = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST WOMEN'S HAND BAG",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN'S JEANS",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN'S BAND",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN'S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+  data.map(function (elem){
+      var div=document.createElement("div");
+      var ava=document.createElement("img");
+      ava.setAttribute("src",elem.imgUrl);
+      ava.setAttribute("id","ava");
+      var h5=document.createElement("h5");
+      h5.textContent=elem.name;
+      var d=document.createElement("div");
+      d.setAttribute("id","boxer");
+      var p=document.createElement("p");
+      p.textContent=elem.price;
+      p.setAttribute("id","park");
+
+      var p1=document.createElement("p");
+      p1.textContent=elem.strikedOffPrice;
+      p1.setAttribute("id","ark");
+
+      d.append(p,p1)
+      div.append(ava,h5,d);
+      document.querySelector("#big").append(div);
+
+  })
+</script>

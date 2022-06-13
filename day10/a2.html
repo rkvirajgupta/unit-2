@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>0</h1>
+    <button id="dec">Decrement</button>
+    <button id="inc">Incerement</button>
+</body>
+</html>
+<script>
+    // document.querySelector("#inc").addEventListener("click",incFunction);
+    document.querySelector("#inc").addEventListener("dblclick",incFunction);
+
+    var sum=0
+   function incFunction(){
+       sum++;
+        document.querySelector("h1").textContent=sum;
+    }
+    // document.querySelector("#dec").addEventListener("click",decFunction);
+    document.querySelector("#dec").addEventListener("dblclick",decFunction);
+   function decFunction(){
+        sum--;
+        document.querySelector("h1").textContent=sum;
+    }
+    //click and dblclick is inbuilt event
+</script>

@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Multiple Selectors</title>
+    <style>div, p {
+        padding: 10px;
+        font-size: 20px;
+        margin: 0;
+      }
+      
+      
+      /* div {
+        padding: 10px;
+        font-size: 20px;
+        margin: 0;
+      }
+      
+      p {
+        padding: 10px;
+        font-size: 20px;
+        margin: 0;
+      } */
+      
+      .class1 {
+        color: red;
+      }
+      
+      .class2 {
+        color: blue;
+      }
+      
+      .class1, .class2 {
+        border: 1px solid black;
+      }
+      
+      /**
+      .class1 {
+        border: 1px solid black;
+      }
+      .class2 {
+        border: 1px solid black;
+      }
+      **/</style>
+  </head>
+  <body>
+    <div>This is the first div</div>
+    <div class="class1">This is the second div</div>
+    <div class="class2">This is the third div</div>
+    <p>This is the first paragraph</p>
+    <p class="class1">This is the second paragraph</p>
+    <p class="class2">This is the third paragraph</p>
+  </body>
+</html>

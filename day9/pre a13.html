@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Set Attributes</title>
+    <style>
+        .row {
+  padding: 10px;
+  font-size: 16px;
+  color: white
+}
+    </style>
+  </head>
+  <body>
+    <div id="container">
+    </div>
+    <button onclick="createStudents()">Create</button>
+  </body>
+</html>
+<script>
+    var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+
+function createStudents() {
+  // Selecting the parent container
+  var cont = document.getElementById('container');
+  
+  // looping the students list
+  for (i = 0; i < students.length; i++){
+    var code = 60 + (i*5);
+    var bg = 'rgb(' + code + ',' + code + ',' + code + ')';
+    // creating the student element
+    var element = document.createElement('div')
+    element.textContent = students[i] + " - " + code;
+    element.setAttribute('class', 'row')
+    element.style.backgroundColor = bg;
+    element.style.fontSize = (16+i) + 'px';
+    
+    // adding the element to the container
+    cont.appendChild(element);
+  }
+  
+}
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="container"><span>I am span</span> </div>
+    <div id="masai">I am masai div</div>
+    <div id="box">I am masai div</div>
+</body>
+</html>
+<script>
+
+
+    console.log(document.getElementById("container").innerHTML);
+    console.log(document.getElementById("container").textContent);
+
+    // document.getElementById("masai").textContent="I am new masai div";
+    document.getElementById("masai").innerHTML="I am new masai div";
+     document.getElementById("box").innerHTML="<h1>I am new masai div<h1/>";
+        // document.getElementById("box").textContent="<h1>I am new masai div<h1/>";
+
+
+// innerHTML is also taking care of tags while textContent dont care of this see
+// above to find difference
+
+
+
+</script>

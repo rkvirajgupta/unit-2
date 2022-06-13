@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" placeholder="enter input" value="masai school"> -->
+    <input id="inputTag" type="text" placeholder="enter input" value="">
+    <input id="inTag" type="text" placeholder="enter input" value="masai">
+    <input id="Tag" type="text" placeholder="enter input" value="viraj"> 
+     <button onclick="getValue()">Get Value</button>
+</body>
+</html>
+<script>
+    console.log(document.getElementById("inputTag"));
+    console.log(document.getElementById("inTag").value);
+
+    function getValue(){
+        var res=document.getElementById("Tag").value;
+        console.log(res);
+        alert(res);
+    }
+
+</script>

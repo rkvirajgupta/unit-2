@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        .container{
+            display:grid;
+            /* grid-template-columns:200px 200px 200px 200px; */
+            /* grid-template-rows: 200px 200px; */
+            /* grid-template-columns:repeat(2,200px); */
+            /* grid-template-rows: repeat(3,100px);  */
+            /* grid-template-columns:repeat(2,200px);
+            grid-template-rows: repeat(3,100px); */
+             /* grid-template-columns:repeat(3,33%); */
+            /* grid-template-rows: repeat(3,100px); */
+            /* grid-template-columns: 1fr 1fr 1fr ; */
+            /* grid-template-rows: repeat(3,100px);  */
+            /* grid-template-columns: 100% 100% 100%; */
+            /* grid-template-rows: repeat(2,100px);  */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-rows: repeat(2,40px); */
+             /* grid-template-columns: repeat(2,1fr); divides 3 parts in 33.33% area  */
+            /* grid-template-rows: repeat(3,100px); */
+            /* grid-template-columns: repeat(6,1fr); divides 6 parts in 16.66% area */
+            /* grid-template-rows: repeat(3,100px); */
+            /* grid-row-gap:20px;
+            grid-column-gap: 20px; */
+            /* grid-gap:20px 40px; */
+            /* grid-gap:5% 2%; */
+        }
+       
+
+
+        /* 100 ->1 fraction->100%
+        100 ->3fr  ->33.33% 33.33% 33.33%
+        100 ->4fr  ->25% 25% 25% 25%
+        100 ->5fr  ->20% 20% 20% 20% 20%*/
+        .contanier>div{
+            color:white;
+            text-align: center;
+        }
+        body{
+            background-color: #ffeead;
+             margin:10px;
+        }
+        .a
+        {
+            background-color: #96ceb4;
+        }
+        .b
+        {
+            background-color: blue;
+        }
+        .c{
+            background-color: yellow;
+        }
+        .d
+        {
+            background-color: coral;
+        }
+        
+        .e {
+            background-color: teal;
+        }
+        .f{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+        <div class="e">E</div>
+        <div class="f">F</div>  
+      </div>
+</body>
+</html>

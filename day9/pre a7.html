@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .class1 {
+  background-color: yellow;
+}
+    </style>
+  </head>
+<body>
+  <div id="demo" style="color:red" class="class1">JavaScript</div>
+  <div>
+    <input type="text" id="myInput" />
+  </div>
+  <br/>
+  <button onclick="showInput()">Alert Input</button>
+  <button onclick="setInput()">Set Input</button>
+  <button onclick="changeInput()">Show Input</button> 
+  <button onclick="changeOriginal()">Change to Javascript</button> 
+</body>
+</html>
+<script>
+  function changeOriginal() {
+  document.getElementById("demo").innerHTML = "JavaScript";
+}
+
+function changeInput() {
+  document.getElementById("demo").innerHTML = document.getElementById("myInput").value;
+}
+
+function showInput() {
+  alert(document.getElementById("myInput").value);
+}
+
+function setInput() {
+  document.getElementById("myInput").value = "School"
+}
+</script>

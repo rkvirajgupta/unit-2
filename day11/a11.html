@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th{
+        border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input id="item" type="text" placeholder="enter item">
+        <input id="qty" type="number" placeholder="enter quantity">
+        <input type="submit" value="add">
+    </form>
+    <table>
+        <thead><tr><th>item</th>
+        <th>quantity</th>
+    <th>delete item</th></tr></thead>
+    <tbody></tbody>
+    </table>
+</body>
+</html> 
+<script>
+    document.querySelector("form").addEventListener("submit",todolist);
+    var arr=JSON.parse(localStorage.getItem("todotodo"))||[];
+    createTable(arr);
+   function todolist(event) {
+       event.preventDefault();
+        var item=document.querySelector("#item").value;
+        var qty=document.querySelector("#qty").value;
+        var obj={items:item,quantity:qty};
+        arr.push(obj);
+        createTable(arr);
+        localStorage.setItem("todotodo",JSON.stringify(arr));
+        
+    }
+
+    function createTable(arr){
+        document.querySelector("tbody").textContent="";
+        arr.map(function(elem,index){
+        var tr=document.createElement("tr");
+        var td1=document.createElement("td");
+        td1.textContent=elem.items;
+        var td2=document.createElement("td");
+        td2.textContent=elem.quantity;
+        var td3=document.createElement("td");
+        td3.textContent="Delete";
+        td3.addEventListener("click",taskvalue)
+        tr.append(td1,td2,td3);
+        document.querySelector("tbody").append(tr);
+
+        
+    
+    });
+}   
+    function taskvalue(index){
+        arr.splice(index,1);
+        localStorage.setItem("todotodo",JSON.stringify(arr));
+        createTable(arr);
+    }
+
+
+    
+</script>

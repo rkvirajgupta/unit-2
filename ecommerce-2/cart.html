@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+
+display:grid;
+grid-template-columns: repeat(4,1fr);
+grid-gap:20px;
+}
+#jj{
+/* border:1px solid red; */
+text-align: center;
+
+}
+#flex{
+display:flex;
+justify-content:space-around;
+/* border:1px solid red; */
+
+}
+#flex > p:nth-child(2){
+text-decoration: line-through;
+
+}
+    </style>
+</head>
+<body>
+    <h1>Total </h1>
+   <input type="text" id="code">
+   <button id="promo">Apply Promo</button>
+   <hr>
+   <button onclick="window.location.href='checkout.html'">Check out</button>
+
+   <h2></h2>
+    <div id="container"></div>
+    
+</body>
+</html>
+<script>
+
+    var cartArr=JSON.parse(localStorage.getItem("CartItems"))||[];
+     console.log(cartArr);
+
+
+    cartArr.map(function(data){
+
+        var div= document.createElement("div");
+    div.setAttribute("id","jj");
+
+    //img,name,price,strikedoffprice
+
+    //img creation
+    var image=document.createElement("img");
+    image.setAttribute("src",data.image_url);
+
+    //name creation
+    var name=document.createElement("p");
+    name.textContent=data.name;
+    //price creation
+
+    var div2= document.createElement("div");
+    div2.setAttribute("id","flex");
+
+    var p1=document.createElement("p");
+    p1.textContent=data.price;
+
+    var p2=document.createElement("p");
+    p2.textContent=data.strikedoffprice;
+    // p2.style.textDecoration="line-through";
+
+    div2.append(p1,p2);
+   
+   div.append(image,name,div2);
+   document.querySelector("#container").append(div);
+
+});
+
+var total=cartArr.reduce(function(acc,cv){
+
+    return acc+Number(cv.price)
+},0)
+
+// document.querySelector("h1").textContent=total;
+// it shows only amount another method to show right 
+// statement
+
+document.querySelector("h1").textContent=`total amount of cart is ₹ ${total}`;
+
+document.querySelector("#promo").addEventListener("click",function(){
+       promo();
+
+
+    });
+
+function promo(){
+    if(document.querySelector("#code").value=="masai30"){
+        var z=(total*30)/100
+     document.querySelector("h2").textContent=`total amount of cart is ₹ ${total-z}`;
+  
+    }
+}
+console.log(total);
+</script>

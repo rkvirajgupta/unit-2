@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #para1~div,#para1~p{
+            background-color: teal;
+        }
+        #para~p{
+            background-color: green;
+        }
+        /* yaha ye(para~p) pehle work isliye kar raha hai kyoki ye id selcotr
+        hai jise prority jyada hai and div~p tag(type selctor hai ) isliye ya work
+        nahi kar raha hai */
+        div~p{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+   
+<div>
+    <p id="para1">hi i am p1</p>
+    <div>
+    
+    <p>hi i am p2</p>
+    <p>hi i am p3</p>
+    <p>hi i am p4</p>
+</div><div>hi i am div</div></div>
+<div>
+    <p id="para1">hi i am p1</p>
+    
+    <p>hi i am p2</p>
+    <p>hi i am p3</p>
+    <p>hi i am p4</p>
+</div>
+<div>
+    <p id="para">hi i am p1</p>
+    
+    <p>hi i am p2</p>
+    <p>hi i am p3</p>
+    <p>hi i am p4</p>
+</div>
+
+    <p id="para">hi i am p1</p>
+    
+    <p>hi i am p2</p>
+    <h1>hi i am heading</h1>
+    <p>hi i am p3</p>
+    <p>hi i am p4</p>
+    <div>
+        <p>hi i am p1</p>
+        
+        <p>hi i am p2</p>
+        <p>hi i am p3</p>
+        <p>hi i am p4</p>
+    </div>
+ <p>ye work kar raha hai para&p ki properity per jo sahi hai b<p>
+   
+    general sibling ki defination hai ki jaise mere 2 bhai hai to wo 
+    dono per proertiy apply hogi bhale hi unke beech ma koi naya element'
+    aa jaye(cousine)jaise sibling sibling cousine sibling to in sab per
+    propertiy apply hogi.cousine ko chod kar.
+</body>
+</html>

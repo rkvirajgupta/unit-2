@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3,300px);
+
+            grid-template-rows: repeat(3,200px);
+            grid-gap:20px;
+        }
+        #container > div{
+            border : 1px solid red;
+        }
+        #container>div>div{
+            display:flex;
+            justify-content: space-between;
+            padding:0 10px;
+
+        }
+        p{
+            color:gray;
+            margin-left:15px;
+
+
+        }
+        #container > .class0 {
+            
+            margin:10px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+        }
+        .tag{
+            color:gold;
+        }
+        @media only screen and (min-width:0px) and (max-width:320px)
+        {
+            #container {
+            grid-template-columns: repeat(1,1fr);
+            grid-template-columns: repeat(1,300px);
+
+            grid-template-rows: repeat(9,200px);
+ 
+             }
+
+        }
+         /* medium screen */
+         @media only screen and (min-width:321px) and (max-width:720px)
+        {
+        
+           #container {
+            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2,300px);
+
+            grid-template-rows: repeat(5,200px);
+
+             }
+        
+         }
+         
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="class0">
+            <div class="class1">
+                <h3>Cappuccino</h3>
+                <h3 class="tag">$49</h3>
+            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+        <div class="class0">
+            <div class="class1">
+                <h3>Americano</h3>
+                <h3 class="tag">$49</h3>            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+        <div class="class0">
+            <div class="class1">
+                <h3>Espresso</h3>
+                <h3 class="tag">$49</h3>            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+        <div class="class0">
+            <div class="class1">
+                <h3>Macchiato</h3>
+                <h3 class="tag">$49</h3>            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+        <div class="class0">
+            <div class="class1">
+                <h3>Mocha</h3>
+                <h3 class="tag">$49</h3>            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+        <div class="class0">
+            <div class="class1">
+                <h3>Coffee Latte</h3>
+                <h3 class="tag">$49</h3>            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+        <div class="class0">
+            <div class="class1">
+                <h3>Piccolo Latte</h3>
+                <h3 class="tag">$49</h3>            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+        <div class="class0">
+            <div class="class1">
+                <h3>Ristretto</h3>
+                <h3 class="tag">$49</h3>            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+        <div class="class0">
+            <div class="class1">
+                <h3>Affogato</h3>
+                <h3 class="tag">$49</h3>            </div>
+                <p>Usage of the internet is becomeing more common due to rapid advance.</p>
+            
+        </div>
+
+        
+    </div>
+</body>
+</html>

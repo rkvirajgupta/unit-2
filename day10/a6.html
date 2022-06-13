@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+    <input id="name" type="text" placeholder="enter name">
+    <input id="mobile" type="number" placeholder="enter number">
+    <!-- <button>submit</button> -->
+     <input type="submit" value="login">
+    </form>
+</body>
+</html>
+<script>
+    //for form the event listener is submit and for button it is click
+    document.querySelector("#myForm").addEventListener("submit",submitFun);
+    function submitFun(event){
+        console.log(event);
+        //whenever we are adding an event lisener an event obj will be created 
+        //which can be accessable as function parameter.
+        event.preventDefault();
+         var name=document.getElementById("name").value;
+        var mbl=document.querySelector("#mobile").value;
+         console.log(name,mbl);
+    }
+//form is combining all types of input
+//in form you cant use buttons instead we will use input type =submit
+//default behavior for form is it will refresh on submittig anytihng
+</script>

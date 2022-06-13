@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+// var arr=[1,5,64,4,10];
+
+// console.log(arr.sort());
+// //not working on double digits
+// var arr=[1,5,4,8];
+
+// console.log(arr.sort());
+// var arr=["a","b","zbx","caba"];
+// //work properly with alphabets
+
+// console.log(arr.sort());
+
+
+// let numbers=[0,1,4,3,2,6,5,7];
+// numbers.sort(function(a,b){
+
+//     console.log("a",a,"b",b);
+//     if(a<b) return 1;
+//     if(a>b) return -1;
+// return 0;
+
+// });
+// console.log(numbers);
+
+// numbers.sort(function(a,b){
+
+// console.log("a",a,"b",b);
+// if(a<b) return -1;
+// if(a>b) return 1;
+// });
+// console.log(numbers);
+
+
+var employees=[
+    {name:"John",salary:90000,hireDate: "July 1,2010"},
+    {name:"Devid",salary:75000,hireDate: "August 15,2009"},
+    {name:"Ana",salary:80000,hireDate: "December 12,2011"},
+    {name:"John",salary:90000,hireDate: "July 1,2011"},
+
+]
+// decending order 9 to 0 large to small
+
+employees.sort(function(a,b){
+    return a.salary-b.salary;
+})
+console.log(employees)
+
+// ascending order 0 to 9 small to large
+
+employees.sort(function(a,b){
+    return b.salary-a.salary;
+})
+console.log(employees)
+// decending order Z to A
+
+employees.sort(function(a,b){
+    if( a.name>b.name) return -1;
+    if( a.name<b.name) return 1;
+    return 0;
+    //cases where both the names are same it will return (0 as it is)
+});
+console.log(employees)
+// ascending order A to Z
+
+// employees.sort(function(a,b){
+//     if( a.name>b.name) return 1;
+//     if( a.name<b.name) return -1;
+//     // return 0;
+
+// });
+// console.log(employees)
+
+
+</script>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+             width:100%;
+            display:grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: 100px 200px 200px 200px;
+            grid-gap:30px;
+            grid-template-areas: 
+            "n n n n n n n n n n n n"
+            "b1 b1 b1 b1 b1 b1 b1 b1 b1 b2 b2 b2"
+            "b1 b1 b1 b1 b1 b1 b1 b1 b1 b3 b3 b3"
+            "b1 b1 b1 b1 b1 b1 b1 b1 b1 b4 b4 b4";
+        }
+        .nav{
+            font-family: sans-serif;
+            padding:10px;
+            font-size:60px;
+        
+        }
+        .nav {
+            grid-area:n;
+            background-color: yellow;
+        }
+        .box1{
+            grid-area:b1;
+            background-color: red;
+            font-family: sans-serif;
+            padding:10px;
+            font-size:30px;
+            color:gray;
+
+        }
+        .box2{
+            grid-area:b2;
+            background-color: green;
+            font-family: sans-serif;
+            padding:10px;
+            font-size:30px;
+            color:gray;
+
+        }
+        .box3{
+            grid-area:b3;
+            background-color: green;
+            font-family: sans-serif;
+            padding:10px;
+            font-size:30px;
+            color:gray;
+
+        }
+        .box4 {
+            grid-area:b4;
+            background-color: green;
+            font-family: sans-serif;
+            padding:10px;
+            font-size:30px;
+            color:gray;
+
+        }
+        @media only screen and (min-width:0px) and (max-width:320px)
+        {
+           #container {
+            
+            grid-template-rows: 80px 150px 100px 100px 100px;
+            grid-template-areas: 
+            "n n n n n n n n n n n n"
+             "b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1"
+             "b2 b2 b2 b2 b2 b2 b2 b2 b2 b2 b2 b2"
+             "b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3"
+             "b4 b4 b4 b4 b4 b4 b4 b4 b4 b4 b4 b4";
+             }
+             .nav{
+            font-family: sans-serif;
+            padding:10px;
+            font-size:25px;}
+
+            .box1,.box2,.box3,.box4{
+                padding:10px;
+            font-size:20px;
+            color:gray;
+            }
+        }
+         /* medium screen */
+         @media only screen and (min-width:321px) and (max-width:720px)
+        {
+        
+           #container {
+            
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-template-areas: 
+            "n n n n n n n n n n n n"
+            "b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1"
+            "b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1"
+            "b2 b2 b2 b2 b3 b3 b3 b3 b4 b4 b4 b4";
+             }
+
+             .box1,.box2,.box3,.box4{
+                padding:10px;
+            font-size:20px;
+            color:gray;
+            }
+            .nav{
+            font-family: sans-serif;
+            padding:10px;
+            font-size:35px;}
+         }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="nav">Navigation</div>
+        <div class="box1">LEFT BOX</div>
+        <div class="box2">RIGHT BOX 1</div>
+        <div class="box3">RIGHT BOX 2</div>
+        <div class="box4">RIGHT BOX 3</div>
+    </div>
+    
+</body>
+</html>
